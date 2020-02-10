@@ -20,6 +20,22 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
+       <mirrors>
+    <!-- mirror
+     | Specifies a repository mirror site to use instead of a given repository. The repository that
+     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
+     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
+     | -->
+
+   <mirror>
+      <id>nas-nexus</id>
+      <name>nas-nexus</name>
+      <url>http://nas25c3f7.lan:10081/repository/maven-public/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+
+  </mirrors>
+
   <profiles>
     <profile>
       <id>fusesource.repo</id>
